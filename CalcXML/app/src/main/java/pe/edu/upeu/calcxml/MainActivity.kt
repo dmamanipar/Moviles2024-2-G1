@@ -8,7 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
+//Puntos: Jorge Miranda (1), Samuel (1), Omar condori(1),Marcos Valeriano(1),Fabricio(1), Yesenia(1), Cardesnas(1/2), Coila(1), mamani callata(1), Ciro Mamani(1)
+//Mery(1), Luis Fernando(1), Quispe Huarilloclla(1), Francklin(1), ()
 class MainActivity : AppCompatActivity() {
     private lateinit var txtResultado:EditText
     private var valAnt=0.0
@@ -39,10 +40,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClikListener(view:View){
+        var botonX=findViewById<Button>(view.id)
         when(view.id){
             R.id.btn4, R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9->{
-                var botonX=findViewById<Button>(view.id)
                 appentContent(botonX.text.toString()) }
+            R.id.btnMult, R.id.btnSum->{
+                setOperador(botonX.text.toString())
+            }
+            R.id.btnIgual->{
+                operacion()
+            }
 
         }
     }
