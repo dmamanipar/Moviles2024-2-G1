@@ -119,4 +119,14 @@ dependencies {
     implementation ("com.google.android.gms:play-services-location:21.0.1")
 //Manager permissions
     implementation ("com.google.accompanist:accompanist-permissions:0.30.1")
+
+//Para trabajar con camara
+    val camerax_version = "1.5.0-alpha01" //1.2.3
+    implementation ("androidx.camera:camera-core:${camerax_version}")
+    implementation ("androidx.camera:camera-camera2:${camerax_version}")
+    implementation ("androidx.camera:camera-lifecycle:${camerax_version}")
+    implementation ("androidx.camera:camera-view:${camerax_version}")
+
+    //Barcode
+    implementation ("com.google.mlkit:barcode-scanning:17.3.0")
 }
