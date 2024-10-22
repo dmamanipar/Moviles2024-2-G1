@@ -73,6 +73,43 @@ class _MyHomePageState extends State<MyHomePage> {
         selectedItemColor: Colors.blue,
         onTap: _onItemTapped,
       ),
+
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text(
+                  'Menú de Navegación',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Inicio'),
+                onTap: () => _onItemTappedDra(0),
+              ),
+              ListTile(
+                leading: Icon(Icons.person),
+                title: Text('Perfil'),
+                onTap: () => _onItemTappedDra(1),
+              ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('Ajustes'),
+                onTap: () => _onItemTappedDra(2),
+              ),
+            ],
+          ),
+        )
+
+
     );
   }
 }
