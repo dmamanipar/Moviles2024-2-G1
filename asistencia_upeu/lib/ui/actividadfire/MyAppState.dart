@@ -14,7 +14,7 @@ import 'package:intl/intl.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class MyAppQR extends StatefulWidget {
-  ActividadModelo modelA;
+  ActividadModeloFire modelA;
   MyAppQR({required this.modelA}):super();
 
   @override
@@ -23,7 +23,7 @@ class MyAppQR extends StatefulWidget {
 
 class _MyAppState extends State<MyAppQR> {
 
-  ActividadModelo modelA;
+  ActividadModeloFire modelA;
   _MyAppState({required this.modelA}):super();
   String _scanBarcode = 'Unknown';
   Position? currentPosition;
